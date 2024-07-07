@@ -1,0 +1,76 @@
+/* 
+  Localizable.strings
+  TozaUz
+
+  Created by Mekhriddin Jumaev on 03/07/24.
+  
+*/
+"main" = "Asosiy";
+"history_tran" = "To'ldirish tarixi";
+"map" = "Xarita";
+"profile" = "Profil";
+"balanse" = "Balans";
+"amount_of_x" =  "Pul miqdori";
+"card_number" = "Karta raqami";
+"name_seoncd_name" = "Ism familiya";
+"send_button" = "Yuborish";
+"from" = "Dan";
+"to" = "Gacha";
+"changePAssword" = "Parolni o'zgartirish";
+"choose_Lang" = "Tilni tanlash";
+"change_design" = "Mavzuni o'zgartirish";
+"history_profile" = "O'tkazmalar tarixi";
+"goOut" = "Chiqish";
+"deleteAccount" = "Akkauntni o'chirish";
+"telegram" = "Telegram guruh";
+"som" = " so'm";
+"design_settings" = "Dizayn sozlamalari";
+"language_change" = "Til sozlamalari";
+"same_as" = "Qurilmadagi kabi";
+"always_dark" = "Har doim qorong'i";
+"always_light" = "Har doim yorug'";
+"uzb" = "O'zbekcha";
+"ru" = "Ruscha";
+"continue" = "Davom etish";
+"login" = "Tizimga kirish";
+"phone_number" = "Telefon raqam";
+"password" = "Parol";
+"login_desc" = "Oldindan ro'yxatdan o'tgan raqamingiz orqali tizimga kiring.";
+"sign_up" = "Ro'yxatdan o'tish";
+"name" = "Ism";
+"second_name" = "Familiya";
+"new_pass" = "Yangi parol";
+"old_pass" = "Hozirgi parol";
+"failure" = "Xatolik";
+"ok" = "Tushinarli";
+"action_on_process" = "Sizning so'rovingiz ko'rib chiqilmoqda...";
+"sucessful" = "Muvaffiqiyatli";
+"check_amount" = "Pul miqdorini tekshiring.";
+"check_card_num" = "Karta raqamni tekshiring.";
+"check_full_name" = "Ism familiyani tekshiring.";
+"amount_action_1" = "Pul miqdori 10000 so'mdan ko'p bo'lishi kerak.";
+"amount_action_2" = "Balansda yetarlicha mablag' mavjud emas.";
+"check_info_action" = "Ma'lumotlaringizni tekshiring.";
+"check_your_name" = "Ismingizni tekshiring.";
+"check_family_name" = "Familiyangizni tekshiring.";
+"check_phone_num" = "Telefon raqamingizni tekshiring.";
+"check_password" = "Parolingizni tekshiring.";
+"check_pass_action" = "Parol kamida 3 ta belgidan iborat bo'lishi kerak.";
+"register_action_1" = "Muvaffiqiyatli ro'yxatdan o'tdingiz.";
+"error_alert_action" = "Oldin bu raqam bilan ro'yxatdan o'tilgan.";
+"no_such_user" = "Foydalanuvchi topilmadi yoki parolingizni tekshiring.";
+"password_change_success" = "Parolingiz muvaffaqiyatli o'zgartirildi.";
+"old_pass_incorrect" = "Eski parol noto'g'ri kiritildi.";
+"change_pass_title" = "Parolni o'rgartirish uchun oldin ro'yxatdan o'tkan parolingizni kiriting va yangi parol o'ylab toping.";
+"version" = "Versiya";
+"enter_pass_tg" = "Kirish uchun parol kiriting";
+"pin_code_wring" = "Pin-kod noto'g'ri kiritildi.";
+"password_wrong" = "Pin-kodlar mos kelmadi.";
+"pin_code_rememeber" = "Pin-kod o'ylab toping";
+"pastor_pin" = "Pin-kodni takrorlang";
+"attention" = "Diqqat!";
+"are_you_sure_log_out" = "Haqiqatan ham hisobingizdan chiqmoqchimisiz?";
+"go_out_guck" = "Chiqish";
+"cancel" = "Bekor qilish";
+"are_you_sure_delete" = "Haqiqatan ham hisobingizni o'chirmoqchimisiz?";
+"delete" = "O'chirish";

@@ -13,6 +13,41 @@
 		10BE93232C2F3FCB009719B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10BE93212C2F3FCB009719B3 /* Main.storyboard */; };
 		10BE93252C2F3FCC009719B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10BE93242C2F3FCC009719B3 /* Assets.xcassets */; };
 		10BE93282C2F3FCC009719B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10BE93262C2F3FCC009719B3 /* LaunchScreen.storyboard */; };
+		10BE93302C2F4005009719B3 /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE932F2C2F4005009719B3 /* LanguageViewController.swift */; };
+		10BE93352C2F410F009719B3 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE93342C2F410F009719B3 /* Color.swift */; };
+		10BE93372C2F4845009719B3 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE93362C2F4845009719B3 /* Fonts.swift */; };
+		10BE93392C2F5381009719B3 /* Vibration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE93382C2F5381009719B3 /* Vibration.swift */; };
+		10BE933C2C2F551C009719B3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE933B2C2F551C009719B3 /* LoginViewController.swift */; };
+		10BE933F2C2F57D0009719B3 /* LoginTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE933E2C2F57D0009719B3 /* LoginTableViewCell.swift */; };
+		10BE93422C2F643A009719B3 /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE93412C2F643A009719B3 /* MainButton.swift */; };
+		10BE93452C3058FC009719B3 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE93442C3058FC009719B3 /* RegisterViewController.swift */; };
+		10BE93482C30591F009719B3 /* RegisterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE93472C30591F009719B3 /* RegisterTableViewCell.swift */; };
+		10BE934B2C3082C2009719B3 /* Login_API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE934A2C3082C2009719B3 /* Login_API.swift */; };
+		10BE934D2C3082C9009719B3 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE934C2C3082C9009719B3 /* LoginModel.swift */; };
+		10BE93502C31D858009719B3 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE934F2C31D858009719B3 /* MainTabBarController.swift */; };
+		10BE93522C31D99F009719B3 /* Ext+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE93512C31D99F009719B3 /* Ext+UIViewController.swift */; };
+		10BE93542C31DA23009719B3 /* Ext+UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE93532C31DA23009719B3 /* Ext+UserDefaults.swift */; };
+		10BE93572C31E5BA009719B3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE93562C31E5BA009719B3 /* ProfileViewController.swift */; };
+		10BE935A2C31EA1B009719B3 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE93592C31EA1B009719B3 /* ProfileTableViewCell.swift */; };
+		10BE936F2C348792009719B3 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE936E2C348792009719B3 /* LoaderView.swift */; };
+		10BE93722C34892F009719B3 /* ChancePassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE93712C34892F009719B3 /* ChancePassViewController.swift */; };
+		10BE93752C3489DC009719B3 /* ChangePasswordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE93742C3489DC009719B3 /* ChangePasswordTableViewCell.swift */; };
+		10BE93782C349417009719B3 /* Lnaguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE93772C349417009719B3 /* Lnaguage.swift */; };
+		10BE937A2C3494B0009719B3 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE93792C3494B0009719B3 /* LanguageManager.swift */; };
+		10BE937D2C349986009719B3 /* PayoutHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE937C2C349986009719B3 /* PayoutHistoryViewController.swift */; };
+		10BE93822C349A5F009719B3 /* PayoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE93812C349A5F009719B3 /* PayoutTableViewCell.swift */; };
+		10BE93892C34A945009719B3 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE93852C34A944009719B3 /* CalendarCollectionViewCell.swift */; };
+		10BE938A2C34A945009719B3 /* CalendarLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE93882C34A945009719B3 /* CalendarLabel.swift */; };
+		10BE938B2C34A945009719B3 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE93862C34A944009719B3 /* CalendarView.swift */; };
+		10BE938C2C34A945009719B3 /* CalendarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE93872C34A944009719B3 /* CalendarHelper.swift */; };
+		10BE938F2C34B918009719B3 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE938E2C34B918009719B3 /* HistoryViewController.swift */; };
+		10BE93922C34CA9C009719B3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE93912C34CA9C009719B3 /* HomeViewController.swift */; };
+		10BE93942C34CBA3009719B3 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE93932C34CBA3009719B3 /* NotificationViewController.swift */; };
+		10BE93972C34CC48009719B3 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BE93962C34CC48009719B3 /* HomeTableViewCell.swift */; };
+		10BE939C2C3564FC009719B3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 10BE939E2C3564FC009719B3 /* Localizable.strings */; };
+		10E2954E2C38B2A600F14547 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E2954D2C38B2A600F14547 /* MapViewController.swift */; };
+		10E295512C3986BE00F14547 /* PinCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E295502C3986BE00F14547 /* PinCodeViewController.swift */; };
+		4A335D184A156EF8D2B010FE /* Pods_TozaUz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7874C1F301A0F56B9295ED9D /* Pods_TozaUz.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +59,48 @@
 		10BE93242C2F3FCC009719B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		10BE93272C2F3FCC009719B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10BE93292C2F3FCC009719B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10BE932F2C2F4005009719B3 /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
+		10BE93342C2F410F009719B3 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		10BE93362C2F4845009719B3 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		10BE93382C2F5381009719B3 /* Vibration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vibration.swift; sourceTree = "<group>"; };
+		10BE933B2C2F551C009719B3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		10BE933E2C2F57D0009719B3 /* LoginTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTableViewCell.swift; sourceTree = "<group>"; };
+		10BE93412C2F643A009719B3 /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
+		10BE93442C3058FC009719B3 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		10BE93472C30591F009719B3 /* RegisterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTableViewCell.swift; sourceTree = "<group>"; };
+		10BE934A2C3082C2009719B3 /* Login_API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_API.swift; sourceTree = "<group>"; };
+		10BE934C2C3082C9009719B3 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		10BE934F2C31D858009719B3 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		10BE93512C31D99F009719B3 /* Ext+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+UIViewController.swift"; sourceTree = "<group>"; };
+		10BE93532C31DA23009719B3 /* Ext+UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+UserDefaults.swift"; sourceTree = "<group>"; };
+		10BE93562C31E5BA009719B3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		10BE93592C31EA1B009719B3 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		10BE936E2C348792009719B3 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
+		10BE93712C34892F009719B3 /* ChancePassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChancePassViewController.swift; sourceTree = "<group>"; };
+		10BE93742C3489DC009719B3 /* ChangePasswordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordTableViewCell.swift; sourceTree = "<group>"; };
+		10BE93772C349417009719B3 /* Lnaguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lnaguage.swift; sourceTree = "<group>"; };
+		10BE93792C3494B0009719B3 /* LanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
+		10BE937C2C349986009719B3 /* PayoutHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayoutHistoryViewController.swift; sourceTree = "<group>"; };
+		10BE93812C349A5F009719B3 /* PayoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayoutTableViewCell.swift; sourceTree = "<group>"; };
+		10BE93852C34A944009719B3 /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
+		10BE93862C34A944009719B3 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		10BE93872C34A944009719B3 /* CalendarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHelper.swift; sourceTree = "<group>"; };
+		10BE93882C34A945009719B3 /* CalendarLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarLabel.swift; sourceTree = "<group>"; };
+		10BE938E2C34B918009719B3 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		10BE93912C34CA9C009719B3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		10BE93932C34CBA3009719B3 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		10BE93962C34CC48009719B3 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		10BE93982C3564B1009719B3 /* uz */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uz; path = uz.lproj/Main.strings; sourceTree = "<group>"; };
+		10BE93992C3564B1009719B3 /* uz */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uz; path = uz.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		10BE939D2C3564FC009719B3 /* uz */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uz; path = uz.lproj/Localizable.strings; sourceTree = "<group>"; };
+		10BE93A02C35658B009719B3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		10BE93A12C35658B009719B3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		10BE93A22C356590009719B3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		10E2954D2C38B2A600F14547 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		10E295502C3986BE00F14547 /* PinCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinCodeViewController.swift; sourceTree = "<group>"; };
+		7874C1F301A0F56B9295ED9D /* Pods_TozaUz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TozaUz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2E416B45DAFB7CA6FFF2637 /* Pods-TozaUz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TozaUz.release.xcconfig"; path = "Target Support Files/Pods-TozaUz/Pods-TozaUz.release.xcconfig"; sourceTree = "<group>"; };
+		CC3080985D431F7A0D011290 /* Pods-TozaUz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TozaUz.debug.xcconfig"; path = "Target Support Files/Pods-TozaUz/Pods-TozaUz.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A335D184A156EF8D2B010FE /* Pods_TozaUz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,8 +118,11 @@
 		10BE930F2C2F3FCB009719B3 = {
 			isa = PBXGroup;
 			children = (
+				10BE939E2C3564FC009719B3 /* Localizable.strings */,
 				10BE931A2C2F3FCB009719B3 /* TozaUz */,
 				10BE93192C2F3FCB009719B3 /* Products */,
+				435C28E266D3747D6F195C4D /* Pods */,
+				EF7295A69C86A9C90E7A688A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +137,20 @@
 		10BE931A2C2F3FCB009719B3 /* TozaUz */ = {
 			isa = PBXGroup;
 			children = (
+				10E2954F2C3986B600F14547 /* PinCodeView */,
+				10E2954C2C38B29800F14547 /* map */,
+				10BE93902C34CA91009719B3 /* mainScreen */,
+				10BE938D2C34B908009719B3 /* history_screen */,
+				10BE93852C34A944009719B3 /* CalendarCollectionViewCell.swift */,
+				10BE93872C34A944009719B3 /* CalendarHelper.swift */,
+				10BE93882C34A945009719B3 /* CalendarLabel.swift */,
+				10BE93862C34A944009719B3 /* CalendarView.swift */,
+				10BE93552C31E5A4009719B3 /* main_screens */,
+				10BE934E2C3186C7009719B3 /* mainTab */,
+				10BE93492C308190009719B3 /* login_back */,
+				10BE93402C2F642E009719B3 /* views */,
+				10BE93332C2F4103009719B3 /* utils */,
+				10BE93312C2F40F3009719B3 /* screens */,
 				10BE931B2C2F3FCB009719B3 /* AppDelegate.swift */,
 				10BE931D2C2F3FCB009719B3 /* SceneDelegate.swift */,
 				10BE931F2C2F3FCB009719B3 /* ViewController.swift */,
@@ -63,8 +158,220 @@
 				10BE93242C2F3FCC009719B3 /* Assets.xcassets */,
 				10BE93262C2F3FCC009719B3 /* LaunchScreen.storyboard */,
 				10BE93292C2F3FCC009719B3 /* Info.plist */,
+				10BE93932C34CBA3009719B3 /* NotificationViewController.swift */,
 			);
 			path = TozaUz;
+			sourceTree = "<group>";
+		};
+		10BE93312C2F40F3009719B3 /* screens */ = {
+			isa = PBXGroup;
+			children = (
+				10BE93702C34891E009719B3 /* change_password */,
+				10BE93432C3058E7009719B3 /* register */,
+				10BE933A2C2F5511009719B3 /* login */,
+				10BE93322C2F40FA009719B3 /* language */,
+			);
+			path = screens;
+			sourceTree = "<group>";
+		};
+		10BE93322C2F40FA009719B3 /* language */ = {
+			isa = PBXGroup;
+			children = (
+				10BE932F2C2F4005009719B3 /* LanguageViewController.swift */,
+			);
+			path = language;
+			sourceTree = "<group>";
+		};
+		10BE93332C2F4103009719B3 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				10BE93342C2F410F009719B3 /* Color.swift */,
+				10BE93362C2F4845009719B3 /* Fonts.swift */,
+				10BE93382C2F5381009719B3 /* Vibration.swift */,
+				10BE93512C31D99F009719B3 /* Ext+UIViewController.swift */,
+				10BE93532C31DA23009719B3 /* Ext+UserDefaults.swift */,
+				10BE936E2C348792009719B3 /* LoaderView.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		10BE933A2C2F5511009719B3 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				10BE933D2C2F57BF009719B3 /* cell */,
+				10BE933B2C2F551C009719B3 /* LoginViewController.swift */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
+		10BE933D2C2F57BF009719B3 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				10BE933E2C2F57D0009719B3 /* LoginTableViewCell.swift */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		10BE93402C2F642E009719B3 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				10BE93412C2F643A009719B3 /* MainButton.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		10BE93432C3058E7009719B3 /* register */ = {
+			isa = PBXGroup;
+			children = (
+				10BE93462C30591B009719B3 /* cell */,
+				10BE93442C3058FC009719B3 /* RegisterViewController.swift */,
+			);
+			path = register;
+			sourceTree = "<group>";
+		};
+		10BE93462C30591B009719B3 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				10BE93472C30591F009719B3 /* RegisterTableViewCell.swift */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		10BE93492C308190009719B3 /* login_back */ = {
+			isa = PBXGroup;
+			children = (
+				10BE934A2C3082C2009719B3 /* Login_API.swift */,
+				10BE934C2C3082C9009719B3 /* LoginModel.swift */,
+			);
+			path = login_back;
+			sourceTree = "<group>";
+		};
+		10BE934E2C3186C7009719B3 /* mainTab */ = {
+			isa = PBXGroup;
+			children = (
+				10BE934F2C31D858009719B3 /* MainTabBarController.swift */,
+			);
+			path = mainTab;
+			sourceTree = "<group>";
+		};
+		10BE93552C31E5A4009719B3 /* main_screens */ = {
+			isa = PBXGroup;
+			children = (
+				10BE937B2C349979009719B3 /* payoutHistory */,
+				10BE93762C349411009719B3 /* changeLang */,
+				10BE93582C31EA04009719B3 /* cell */,
+				10BE93562C31E5BA009719B3 /* ProfileViewController.swift */,
+			);
+			path = main_screens;
+			sourceTree = "<group>";
+		};
+		10BE93582C31EA04009719B3 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				10BE93592C31EA1B009719B3 /* ProfileTableViewCell.swift */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		10BE93702C34891E009719B3 /* change_password */ = {
+			isa = PBXGroup;
+			children = (
+				10BE93732C3489C4009719B3 /* cell */,
+				10BE93712C34892F009719B3 /* ChancePassViewController.swift */,
+			);
+			path = change_password;
+			sourceTree = "<group>";
+		};
+		10BE93732C3489C4009719B3 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				10BE93742C3489DC009719B3 /* ChangePasswordTableViewCell.swift */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		10BE93762C349411009719B3 /* changeLang */ = {
+			isa = PBXGroup;
+			children = (
+				10BE93772C349417009719B3 /* Lnaguage.swift */,
+				10BE93792C3494B0009719B3 /* LanguageManager.swift */,
+			);
+			path = changeLang;
+			sourceTree = "<group>";
+		};
+		10BE937B2C349979009719B3 /* payoutHistory */ = {
+			isa = PBXGroup;
+			children = (
+				10BE937E2C349A42009719B3 /* cell */,
+				10BE937C2C349986009719B3 /* PayoutHistoryViewController.swift */,
+			);
+			path = payoutHistory;
+			sourceTree = "<group>";
+		};
+		10BE937E2C349A42009719B3 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				10BE93812C349A5F009719B3 /* PayoutTableViewCell.swift */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		10BE938D2C34B908009719B3 /* history_screen */ = {
+			isa = PBXGroup;
+			children = (
+				10BE938E2C34B918009719B3 /* HistoryViewController.swift */,
+			);
+			path = history_screen;
+			sourceTree = "<group>";
+		};
+		10BE93902C34CA91009719B3 /* mainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				10BE93952C34CC3B009719B3 /* cell */,
+				10BE93912C34CA9C009719B3 /* HomeViewController.swift */,
+			);
+			path = mainScreen;
+			sourceTree = "<group>";
+		};
+		10BE93952C34CC3B009719B3 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				10BE93962C34CC48009719B3 /* HomeTableViewCell.swift */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		10E2954C2C38B29800F14547 /* map */ = {
+			isa = PBXGroup;
+			children = (
+				10E2954D2C38B2A600F14547 /* MapViewController.swift */,
+			);
+			path = map;
+			sourceTree = "<group>";
+		};
+		10E2954F2C3986B600F14547 /* PinCodeView */ = {
+			isa = PBXGroup;
+			children = (
+				10E295502C3986BE00F14547 /* PinCodeViewController.swift */,
+			);
+			path = PinCodeView;
+			sourceTree = "<group>";
+		};
+		435C28E266D3747D6F195C4D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CC3080985D431F7A0D011290 /* Pods-TozaUz.debug.xcconfig */,
+				A2E416B45DAFB7CA6FFF2637 /* Pods-TozaUz.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EF7295A69C86A9C90E7A688A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7874C1F301A0F56B9295ED9D /* Pods_TozaUz.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +381,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 10BE932C2C2F3FCC009719B3 /* Build configuration list for PBXNativeTarget "TozaUz" */;
 			buildPhases = (
+				D89998B20B602E28A4736CA5 /* [CP] Check Pods Manifest.lock */,
 				10BE93142C2F3FCB009719B3 /* Sources */,
 				10BE93152C2F3FCB009719B3 /* Frameworks */,
 				10BE93162C2F3FCB009719B3 /* Resources */,
+				4A7441D2702936552C489734 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -109,6 +418,8 @@
 			knownRegions = (
 				en,
 				Base,
+				uz,
+				ru,
 			);
 			mainGroup = 10BE930F2C2F3FCB009719B3;
 			productRefGroup = 10BE93192C2F3FCB009719B3 /* Products */;
@@ -126,6 +437,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10BE93282C2F3FCC009719B3 /* LaunchScreen.storyboard in Resources */,
+				10BE939C2C3564FC009719B3 /* Localizable.strings in Resources */,
 				10BE93252C2F3FCC009719B3 /* Assets.xcassets in Resources */,
 				10BE93232C2F3FCB009719B3 /* Main.storyboard in Resources */,
 			);
@@ -133,13 +445,88 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4A7441D2702936552C489734 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TozaUz/Pods-TozaUz-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TozaUz/Pods-TozaUz-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TozaUz/Pods-TozaUz-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D89998B20B602E28A4736CA5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TozaUz-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		10BE93142C2F3FCB009719B3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10BE93722C34892F009719B3 /* ChancePassViewController.swift in Sources */,
+				10BE938F2C34B918009719B3 /* HistoryViewController.swift in Sources */,
+				10BE93392C2F5381009719B3 /* Vibration.swift in Sources */,
+				10BE937D2C349986009719B3 /* PayoutHistoryViewController.swift in Sources */,
+				10BE934D2C3082C9009719B3 /* LoginModel.swift in Sources */,
+				10BE93482C30591F009719B3 /* RegisterTableViewCell.swift in Sources */,
 				10BE93202C2F3FCB009719B3 /* ViewController.swift in Sources */,
 				10BE931C2C2F3FCB009719B3 /* AppDelegate.swift in Sources */,
+				10BE938B2C34A945009719B3 /* CalendarView.swift in Sources */,
+				10BE93782C349417009719B3 /* Lnaguage.swift in Sources */,
+				10BE93302C2F4005009719B3 /* LanguageViewController.swift in Sources */,
+				10BE93572C31E5BA009719B3 /* ProfileViewController.swift in Sources */,
+				10BE935A2C31EA1B009719B3 /* ProfileTableViewCell.swift in Sources */,
+				10E2954E2C38B2A600F14547 /* MapViewController.swift in Sources */,
+				10BE934B2C3082C2009719B3 /* Login_API.swift in Sources */,
+				10E295512C3986BE00F14547 /* PinCodeViewController.swift in Sources */,
+				10BE93422C2F643A009719B3 /* MainButton.swift in Sources */,
+				10BE93822C349A5F009719B3 /* PayoutTableViewCell.swift in Sources */,
+				10BE933C2C2F551C009719B3 /* LoginViewController.swift in Sources */,
+				10BE933F2C2F57D0009719B3 /* LoginTableViewCell.swift in Sources */,
+				10BE938A2C34A945009719B3 /* CalendarLabel.swift in Sources */,
+				10BE93502C31D858009719B3 /* MainTabBarController.swift in Sources */,
+				10BE937A2C3494B0009719B3 /* LanguageManager.swift in Sources */,
+				10BE93542C31DA23009719B3 /* Ext+UserDefaults.swift in Sources */,
+				10BE93352C2F410F009719B3 /* Color.swift in Sources */,
+				10BE93942C34CBA3009719B3 /* NotificationViewController.swift in Sources */,
+				10BE93372C2F4845009719B3 /* Fonts.swift in Sources */,
+				10BE93452C3058FC009719B3 /* RegisterViewController.swift in Sources */,
+				10BE936F2C348792009719B3 /* LoaderView.swift in Sources */,
+				10BE938C2C34A945009719B3 /* CalendarHelper.swift in Sources */,
+				10BE93922C34CA9C009719B3 /* HomeViewController.swift in Sources */,
+				10BE93522C31D99F009719B3 /* Ext+UIViewController.swift in Sources */,
+				10BE93892C34A945009719B3 /* CalendarCollectionViewCell.swift in Sources */,
+				10BE93752C3489DC009719B3 /* ChangePasswordTableViewCell.swift in Sources */,
+				10BE93972C34CC48009719B3 /* HomeTableViewCell.swift in Sources */,
 				10BE931E2C2F3FCB009719B3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,6 +538,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				10BE93222C2F3FCB009719B3 /* Base */,
+				10BE93982C3564B1009719B3 /* uz */,
+				10BE93A02C35658B009719B3 /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -159,8 +548,19 @@
 			isa = PBXVariantGroup;
 			children = (
 				10BE93272C2F3FCC009719B3 /* Base */,
+				10BE93992C3564B1009719B3 /* uz */,
+				10BE93A12C35658B009719B3 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		10BE939E2C3564FC009719B3 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				10BE939D2C3564FC009719B3 /* uz */,
+				10BE93A22C356590009719B3 /* ru */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -171,6 +571,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -218,7 +619,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -234,6 +635,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -275,7 +677,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -287,57 +689,67 @@
 		};
 		10BE932D2C2F3FCC009719B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC3080985D431F7A0D011290 /* Pods-TozaUz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2PRTB3DVMF;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TozaUz/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TozaUz;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Мы используем ваше местоположение, чтобы показывать наши станции по сбору мусора.\n";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mekhriddin.TozaUz.TozaUz;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mekhriddin.TozaUz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		10BE932E2C2F3FCC009719B3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2E416B45DAFB7CA6FFF2637 /* Pods-TozaUz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2PRTB3DVMF;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TozaUz/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TozaUz;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Мы используем ваше местоположение, чтобы показывать наши станции по сбору мусора.\n";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mekhriddin.TozaUz.TozaUz;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mekhriddin.TozaUz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

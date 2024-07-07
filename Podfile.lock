@@ -1,0 +1,59 @@
+PODS:
+  - Alamofire (5.9.1)
+  - Localize-Swift (3.2.0):
+    - Localize-Swift/LocalizeSwiftCore (= 3.2.0)
+    - Localize-Swift/UIKit (= 3.2.0)
+  - Localize-Swift/LocalizeSwiftCore (3.2.0)
+  - Localize-Swift/UIKit (3.2.0):
+    - Localize-Swift/LocalizeSwiftCore
+  - MapboxCommon (24.5.0)
+  - MapboxCoreMaps (11.5.0):
+    - MapboxCommon (~> 24.5)
+  - MapboxMaps (11.5.0):
+    - MapboxCommon (= 24.5.0)
+    - MapboxCoreMaps (= 11.5.0)
+    - Turf (= 2.8.0)
+  - PanModal (1.2.7)
+  - PhoneNumberKit (3.7.11):
+    - PhoneNumberKit/PhoneNumberKitCore (= 3.7.11)
+    - PhoneNumberKit/UIKit (= 3.7.11)
+  - PhoneNumberKit/PhoneNumberKitCore (3.7.11)
+  - PhoneNumberKit/UIKit (3.7.11):
+    - PhoneNumberKit/PhoneNumberKitCore
+  - SnapKit (5.7.1)
+  - Turf (2.8.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - Localize-Swift (~> 3.2)
+  - MapboxMaps (= 11.5.0)
+  - PanModal
+  - PhoneNumberKit (~> 3.7)
+  - SnapKit (~> 5.7.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Localize-Swift
+    - MapboxCommon
+    - MapboxCoreMaps
+    - MapboxMaps
+    - PanModal
+    - PhoneNumberKit
+    - SnapKit
+    - Turf
+
+SPEC CHECKSUMS:
+  Alamofire: f36a35757af4587d8e4f4bfa223ad10be2422b8c
+  Localize-Swift: 6f4475136bdb0d7b2882ea3d4ea919d70142b232
+  MapboxCommon: c69a04a1accd77650372c96d8978a15ed1d95186
+  MapboxCoreMaps: 7874c1817cd58d83b3ae9b043d53ba8a46280f16
+  MapboxMaps: 8a4983451aadbe1e352f7fc2d7062faa854f16d5
+  PanModal: 3e16ead1a907fb06f4df3f13492fd00149fa4974
+  PhoneNumberKit: ced55861269312a5e3bc2ef82a58d6255b1c976a
+  SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
+  Turf: aa2ede4298009639d10db36aba1a7ebaad072a5e
+
+PODFILE CHECKSUM: f01c09423b28ce5537e400aeab460119640b0947
+
+COCOAPODS: 1.15.2

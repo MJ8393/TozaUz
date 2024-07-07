@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "9FB9B339-58B7-4352-9105-42B1E4705647"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E20B77B7-5661-49E1-BA6E-0EA9716F8248"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TozaUz/screens/register/cell/RegisterTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "286"
+            endingLineNumber = "286"
+            landmarkName = "eyeButtonTapped()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E20B77B7-5661-49E1-BA6E-0EA9716F8248 - 30f87019cc7036b8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TozaUz.RegisterTableViewCell.eyeButtonTapped() -&gt; ()"
+                  moduleName = "TozaUz"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mekhriddinjumaev/Desktop/TozaUz/TozaUz/screens/register/cell/RegisterTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "288"
+                  endingLineNumber = "288"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "E20B77B7-5661-49E1-BA6E-0EA9716F8248 - 30f87019cc70369f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TozaUz.RegisterTableViewCell.eyeButtonTapped() -&gt; ()"
+                  moduleName = "TozaUz"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mekhriddinjumaev/Desktop/TozaUz/TozaUz/screens/register/cell/RegisterTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "287"
+                  endingLineNumber = "287"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5957145B-7EE7-4490-8BE5-0525E743D34B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TozaUz/history_screen/HistoryViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "didTapCalendar(selectedDate:isFrom:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "68EF84A7-E7C6-4F82-9F60-AFADB46A2B9A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TozaUz/PinCodeView/PinCodeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "setupUI()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "68EF84A7-E7C6-4F82-9F60-AFADB46A2B9A - c14f34555f1c64a8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TozaUz.PasswordViewController.setupUI() -&gt; ()"
+                  moduleName = "TozaUz"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mekhriddinjumaev/Desktop/TozaUz/TozaUz/PinCodeView/PinCodeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "2696">
+               </Location>
+               <Location
+                  uuid = "68EF84A7-E7C6-4F82-9F60-AFADB46A2B9A - c14f34555f1c64a8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TozaUz.PasswordViewController.setupUI() -&gt; ()"
+                  moduleName = "TozaUz"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mekhriddinjumaev/Desktop/TozaUz/TozaUz/PinCodeView/PinCodeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "2692">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4731BB5A-E912-4B06-AC7F-E1A5B79C32FA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TozaUz/PinCodeView/PinCodeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "setupUI()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E43D583B-596C-40DA-B983-3B6B58D63436"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TozaUz/map/MapViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "traitCollectionDidChange(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
