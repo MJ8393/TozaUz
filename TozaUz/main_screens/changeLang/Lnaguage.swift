@@ -27,12 +27,14 @@ enum AppMode {
     case system
 }
 
-let languages: [Language] = [
-    Language(image: UIImage(named: "UZ")!, name: "uzb".translate(), language: .Uzbek),
-    Language(image: UIImage(named: "RU")!, name: "ru".translate(), language: .English),
-]
+
 
 class ChangeLanguage: UIViewController {
+    
+    let languages: [Language] = [
+        Language(image: UIImage(named: "UZ")!, name: "uzb".translate(), language: .Uzbek),
+        Language(image: UIImage(named: "RU")!, name: "ru".translate(), language: .English),
+    ]
     
     let modes: [Mode] = [
         Mode(image:  UIImage(systemName: "iphone.circle")!, name: "same_as".translate(), mode: .system),

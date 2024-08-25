@@ -26,7 +26,7 @@ class RegisterViewController: UIViewController {
     }()
     
     lazy var mainButton: MainButton = {
-        let button = MainButton(title: "Davom etish")
+        let button = MainButton(title: "continue".translate())
 //        button.addTarget(self, action: #selector(continueRegisterIt), for: .touchUpInside)
         return button
     }()
@@ -98,19 +98,15 @@ class RegisterViewController: UIViewController {
                 showAlert(message: "check_pass_action".translate())
             } else {
                 showLoadingView()
-                TozaAPI.shared.registerUser(firstName: firstName, lastName: secondtName, phoneNumber: phoneNumber, password: password) { [weak self] result in
-                    guard let self = self else { return }
+                TozaAPI.shared.registerUser(firstName: firstName, lastName: secondtName, phoneNumber: phoneNumber, password: password) { result in
                     self.dissmissLoadingView()
                     switch result {
-                    case .success(let user):
-                        let alertController = UIAlertController(title: "sucessful".translate(), message: "register_action_1".translate(), preferredStyle: .alert)
-                        let defaultAction = UIAlertAction(title: "ok".translate(), style: .default, handler: { _ in
-                            self.navigationController?.popViewController(animated: true)
-                        })
-                        alertController.addAction(defaultAction)
-                        present(alertController, animated: true) {
-                        }
-                        print("User registered: \(user)")
+                    case .success(let otp):
+                        print("OTP: ", otp)
+                        let vc = VerifyAccountVC()
+                        vc.otp = otp
+                        vc.phone_number = phoneNumber
+                        self.navigationController?.pushViewController(vc, animated: true)
                     case .failure(let error):
                         self.showAlert(message: "error_alert_action".translate())
                         print("Failed to register user: \(error)")

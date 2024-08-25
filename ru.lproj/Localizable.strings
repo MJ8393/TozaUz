@@ -31,7 +31,7 @@
 "always_light" = "Всегда светлая";
 "uzb" = "Узбекский";
 "ru" = "Русский";
-"continue" = "Продолжать";
+"continue" = "Продолжить";
 "login" = "Логин";
 "phone_number" = "Номер телефона";
 "password" = "Пароль";
@@ -74,3 +74,18 @@
 "cancel" = "Отмена";
 "are_you_sure_delete" = "Вы уверены, что хотите удалить свою учетную запись?";
 "delete" = "Удалить";
+
+"error_alert_action_v2" = "Неверный SMS-код.";
+"error_alert_action_v3" = "Вы еще не регистрировались!";
+"register_action_srfdf" = "Пароль восстановлен.";
+"forgot_pass" = "Забыли пароль?";
+"Recover_Password_title" = "Сбросить пароль";
+"tashdiqlash_zd" = "Подтверждение";
+"sms_code" = "СМС-код";
+"sms_text_er" = "Подтвердите СМС-код";
+"profile_change_info" = "Изменить информацию профиля";
+"save" = "Сохранить";
+"changel_profile_data" = "Информация профиля успешно изменена.";
+"login_later" = "Войти позже";
+"Penalties" = "Штрафы";
+"nopenalties" = "У вас еще нет штрафов.";

@@ -15,6 +15,8 @@ protocol ProfileTableViewCellDelegate: AnyObject {
     func logout()
     func delete()
     func gototelegra()
+    func changeProfile()
+    func gotoJarima()
 }
 
 class ProfileTableViewCell: UITableViewCell {
@@ -70,6 +72,16 @@ class ProfileTableViewCell: UITableViewCell {
         return view
     }()
     
+    lazy var profileCell: CellView = {
+        let cell = CellView(image: UIImage(systemName: "person.badge.key")!, name: "profile_change_info".translate())
+        cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(changeProfileCellTapped)))
+        return cell
+    }()
+    
+    @objc func changeProfileCellTapped() {
+        delegate?.changeProfile()
+    }
+    
     lazy var changePasswordCell: CellView = {
         let cell = CellView(image: UIImage(systemName: "lock.rotation")!, name: "changePAssword".translate())
         cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(changePasswordCellTapped)))
@@ -123,6 +135,15 @@ class ProfileTableViewCell: UITableViewCell {
 
     }
     
+    lazy var jarimaCell: CellView = {
+        let cell = CellView(image: UIImage(systemName: "exclamationmark.shield"), name: "Penalties".translate())
+        cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(gotoJarima)))
+        return cell
+    }()
+    
+    @objc func gotoJarima() {
+        delegate?.gotoJarima()
+    }
     
     lazy var deeleteView: UIView = {
         let view = UIView()
@@ -164,95 +185,158 @@ class ProfileTableViewCell: UITableViewCell {
     }
     
     private func initViews() {
-        contentView.addSubview(subView)
-        subView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
+        if UD.isLoginMode == "y" {
+            contentView.addSubview(subView)
+            subView.snp.makeConstraints { make in
+                make.edges.equalToSuperview()
+            }
+            
+            subView.addSubview(cellView)
+            cellView.snp.makeConstraints { make in
+                make.left.equalToSuperview().offset(20)
+                make.top.equalToSuperview().offset(20)
+                make.right.equalToSuperview().offset(-20)
+            }
+   
+            cellView.addSubview(changeLanguageCell)
+            changeLanguageCell.snp.makeConstraints { make in
+                make.left.right.equalToSuperview().offset(0)
+                make.top.equalToSuperview().offset(10)
+            }
+            
+            cellView.addSubview(setModeCell)
+            setModeCell.snp.makeConstraints { make in
+                make.left.right.equalToSuperview().offset(0)
+                make.top.equalTo(changeLanguageCell.snp.bottom).offset(0)
+            }
+            
+            cellView.addSubview(telegramCell)
+            telegramCell.snp.makeConstraints { make in
+                make.left.right.equalToSuperview().offset(0)
+                make.top.equalTo(setModeCell.snp.bottom).offset(0)
+                make.bottom.equalToSuperview().offset(-10)
+            }
+            
         
-        subView.addSubview(accountView)
-        accountView.snp.makeConstraints { make in
-            make.left.equalToSuperview().offset(20)
-            make.top.equalToSuperview().offset(20)
-            make.right.equalToSuperview().offset(-20)
-        }
-        
-        accountView.addSubview(accountView2)
-        accountView2.snp.makeConstraints { make in
-            make.left.equalToSuperview().offset(20)
-            make.top.equalToSuperview().offset(20)
-            make.bottom.equalToSuperview().offset(-20)
-            make.height.width.equalTo(50)
-        }
-        
-        accountView.addSubview(nameLabel)
-        nameLabel.snp.makeConstraints { make in
-            make.left.equalTo(accountView2.snp.right).offset(20)
-            make.right.equalToSuperview().offset(-20)
-            make.bottom.equalTo(accountView.snp.centerY).offset(-3.5)
-        }
-        
-        accountView.addSubview(phoneLabel)
-        phoneLabel.snp.makeConstraints { make in
-            make.left.equalTo(accountView2.snp.right).offset(20)
-            make.right.equalToSuperview().offset(-20)
-            make.top.equalTo(accountView.snp.centerY).offset(3.5)
-        }
-        
-        subView.addSubview(cellView)
-        cellView.snp.makeConstraints { make in
-            make.left.right.equalTo(accountView)
-            make.top.equalTo(accountView.snp.bottom).offset(30)
-        }
-        
-        cellView.addSubview(changePasswordCell)
-        changePasswordCell.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(10)
-            make.left.right.equalToSuperview().offset(0)
-        }
-        
-        cellView.addSubview(changeLanguageCell)
-        changeLanguageCell.snp.makeConstraints { make in
-            make.left.right.equalToSuperview().offset(0)
-            make.top.equalTo(changePasswordCell.snp.bottom).offset(0)
-        }
-        
-        cellView.addSubview(setModeCell)
-        setModeCell.snp.makeConstraints { make in
-            make.left.right.equalToSuperview().offset(0)
-            make.top.equalTo(changeLanguageCell.snp.bottom).offset(0)
-        }
-        
-        cellView.addSubview(historyCell)
-        historyCell.snp.makeConstraints { make in
-            make.left.right.equalToSuperview().offset(0)
-            make.top.equalTo(setModeCell.snp.bottom).offset(0)
-        }
-        
-        cellView.addSubview(telegramCell)
-        telegramCell.snp.makeConstraints { make in
-            make.left.right.equalToSuperview().offset(0)
-            make.top.equalTo(historyCell.snp.bottom).offset(0)
-            make.bottom.equalToSuperview().offset(-10)
-        }
-        
-        subView.addSubview(deeleteView)
-        deeleteView.snp.makeConstraints { make in
-            make.left.right.equalTo(accountView)
-            make.top.equalTo(cellView.snp.bottom).offset(30)
-            make.bottom.equalToSuperview().offset(-20)
-        }
-        
-        deeleteView.addSubview(logOutCell)
-        logOutCell.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(10)
-            make.left.right.equalToSuperview().offset(0)
-        }
-        
-        deeleteView.addSubview(deleteCell)
-        deleteCell.snp.makeConstraints { make in
-            make.top.equalTo(logOutCell.snp.bottom).offset(0)
-            make.bottom.equalToSuperview().offset(-10)
-            make.left.right.equalToSuperview().offset(0)
+            subView.addSubview(deeleteView)
+            deeleteView.snp.makeConstraints { make in
+                make.left.right.equalTo(cellView)
+                make.top.equalTo(cellView.snp.bottom).offset(30)
+                make.bottom.equalToSuperview().offset(-20)
+            }
+            
+            logOutCell.phoneLabel.text = "login".translate()
+            logOutCell.iconImageView.tintColor = AppColors.mainColor
+            deeleteView.addSubview(logOutCell)
+            logOutCell.snp.makeConstraints { make in
+                make.top.equalToSuperview().offset(10)
+                make.left.right.equalToSuperview().offset(0)
+                make.bottom.equalToSuperview().offset(-10)
+            }
+        } else {
+            contentView.addSubview(subView)
+            subView.snp.makeConstraints { make in
+                make.edges.equalToSuperview()
+            }
+            
+            subView.addSubview(accountView)
+            accountView.snp.makeConstraints { make in
+                make.left.equalToSuperview().offset(20)
+                make.top.equalToSuperview().offset(20)
+                make.right.equalToSuperview().offset(-20)
+            }
+            
+            accountView.addSubview(accountView2)
+            accountView2.snp.makeConstraints { make in
+                make.left.equalToSuperview().offset(20)
+                make.top.equalToSuperview().offset(20)
+                make.bottom.equalToSuperview().offset(-20)
+                make.height.width.equalTo(50)
+            }
+            
+            accountView.addSubview(nameLabel)
+            nameLabel.snp.makeConstraints { make in
+                make.left.equalTo(accountView2.snp.right).offset(20)
+                make.right.equalToSuperview().offset(-20)
+                make.bottom.equalTo(accountView.snp.centerY).offset(-3.5)
+            }
+            
+            accountView.addSubview(phoneLabel)
+            phoneLabel.snp.makeConstraints { make in
+                make.left.equalTo(accountView2.snp.right).offset(20)
+                make.right.equalToSuperview().offset(-20)
+                make.top.equalTo(accountView.snp.centerY).offset(3.5)
+            }
+            
+            subView.addSubview(cellView)
+            cellView.snp.makeConstraints { make in
+                make.left.right.equalTo(accountView)
+                make.top.equalTo(accountView.snp.bottom).offset(30)
+            }
+            
+            cellView.addSubview(profileCell)
+            profileCell.snp.makeConstraints { make in
+                make.top.equalToSuperview().offset(10)
+                make.left.right.equalToSuperview().offset(0)
+            }
+            
+            cellView.addSubview(changePasswordCell)
+            changePasswordCell.snp.makeConstraints { make in
+                make.top.equalTo(profileCell.snp.bottom).offset(0)
+                make.left.right.equalToSuperview().offset(0)
+            }
+            
+            cellView.addSubview(changeLanguageCell)
+            changeLanguageCell.snp.makeConstraints { make in
+                make.left.right.equalToSuperview().offset(0)
+                make.top.equalTo(changePasswordCell.snp.bottom).offset(0)
+            }
+            
+            cellView.addSubview(setModeCell)
+            setModeCell.snp.makeConstraints { make in
+                make.left.right.equalToSuperview().offset(0)
+                make.top.equalTo(changeLanguageCell.snp.bottom).offset(0)
+            }
+            
+            cellView.addSubview(historyCell)
+            historyCell.snp.makeConstraints { make in
+                make.left.right.equalToSuperview().offset(0)
+                make.top.equalTo(setModeCell.snp.bottom).offset(0)
+            }
+            
+            cellView.addSubview(telegramCell)
+            telegramCell.snp.makeConstraints { make in
+                make.left.right.equalToSuperview().offset(0)
+                make.top.equalTo(historyCell.snp.bottom).offset(0)
+            }
+            
+            cellView.addSubview(jarimaCell)
+            jarimaCell.snp.makeConstraints { make in
+                make.left.right.equalToSuperview().offset(0)
+                make.top.equalTo(telegramCell.snp.bottom).offset(0)
+                make.bottom.equalToSuperview().offset(-10)
+            }
+//
+            
+            subView.addSubview(deeleteView)
+            deeleteView.snp.makeConstraints { make in
+                make.left.right.equalTo(accountView)
+                make.top.equalTo(cellView.snp.bottom).offset(30)
+                make.bottom.equalToSuperview().offset(-20)
+            }
+            
+            deeleteView.addSubview(logOutCell)
+            logOutCell.snp.makeConstraints { make in
+                make.top.equalToSuperview().offset(10)
+                make.left.right.equalToSuperview().offset(0)
+            }
+            
+            deeleteView.addSubview(deleteCell)
+            deleteCell.snp.makeConstraints { make in
+                make.top.equalTo(logOutCell.snp.bottom).offset(0)
+                make.bottom.equalToSuperview().offset(-10)
+                make.left.right.equalToSuperview().offset(0)
+            }
         }
     }
 

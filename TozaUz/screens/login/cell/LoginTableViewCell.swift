@@ -9,6 +9,7 @@ import UIKit
 
 protocol LoginTableViewCellDelegate: AnyObject {
     func registerButtonTapped()
+    func forgotPassTapped()
 }
 
 class LoginTableViewCell: UITableViewCell {
@@ -141,6 +142,18 @@ class LoginTableViewCell: UITableViewCell {
         return button
     }()
     
+    lazy var forgotButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .clear
+        button.setTitle("forgot_pass".translate(), for: .normal)
+        button.setTitleColor(AppColors.mainColor, for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
+        button.addTarget(self, action: #selector(forgotPassTapped), for: .touchUpInside)
+        button.contentHorizontalAlignment = .center
+        return button
+    }()
+    
+    
     @objc func eyeButtonTapped() {
         if passwordTextField.isSecureTextEntry {
             passwordTextField.isSecureTextEntry = false
@@ -153,6 +166,10 @@ class LoginTableViewCell: UITableViewCell {
     
     @objc func registerButtonTapped() {
         delegate?.registerButtonTapped()
+    }
+    
+    @objc func forgotPassTapped() {
+        delegate?.forgotPassTapped()
     }
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -205,21 +222,31 @@ class LoginTableViewCell: UITableViewCell {
             make.height.equalTo(60)
         }
         
+        subView.addSubview(forgotButton)
+        forgotButton.snp.makeConstraints { make in
+            make.top.equalTo(passwordTextField.snp.bottom).offset(15)
+            make.height.equalTo(40)
+            make.centerX.equalToSuperview()
+            make.width.equalTo(200)
+        }
+        
         subView.addSubview(descriptionLabel)
         descriptionLabel.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(80)
             make.right.equalToSuperview().offset(-80)
-            make.top.equalTo(passwordTextField.snp.bottom).offset(30)
+            make.top.equalTo(forgotButton.snp.bottom).offset(10)
         }
         
         subView.addSubview(registerButton)
         registerButton.snp.makeConstraints { make in
-            make.top.equalTo(descriptionLabel.snp.bottom).offset(15)
+            make.top.equalTo(descriptionLabel.snp.bottom).offset(0)
             make.height.equalTo(65)
             make.centerX.equalToSuperview()
             make.width.equalTo(180)
             make.bottom.equalToSuperview()
         }
+        
+     
     }
     
 }

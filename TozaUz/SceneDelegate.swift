@@ -19,14 +19,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        if let token = UD.token, token.replacingOccurrences(of: " ", with: "") != "" {
-            let vc = UINavigationController(rootViewController: PasswordViewController())
-            window?.rootViewController = vc
+        
+        if UD.isLoginMode == "y" {
+            window?.rootViewController = MainTabBarController()
+            setMode()
+            window?.makeKeyAndVisible()
         } else {
-            window?.rootViewController = UINavigationController(rootViewController: LanguageViewController())
+            if let token = UD.token, token.replacingOccurrences(of: " ", with: "") != "" {
+                let vc = UINavigationController(rootViewController: PasswordViewController())
+                window?.rootViewController = vc
+            } else {
+                window?.rootViewController = UINavigationController(rootViewController: LanguageViewController())
+            }
+            setMode()
+            window?.makeKeyAndVisible()
         }
-        setMode()
-        window?.makeKeyAndVisible()
     }
     
     func setMode() {

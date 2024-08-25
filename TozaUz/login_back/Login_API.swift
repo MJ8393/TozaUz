@@ -13,8 +13,8 @@ class TozaAPI {
     
     private init() {}
     
-    func registerUser(firstName: String, lastName: String, phoneNumber: String, password: String, completion: @escaping (Result<User, Error>) -> Void) {
-        let url = "https://api.tozauz.uz/api/v1/account/register/"
+    func registerUser(firstName: String, lastName: String, phoneNumber: String, password: String, completion: @escaping (Result<String, Error>) -> Void) {
+        let url = "https://api.tozauz.uz/api/v1/account/register-otp/"
         let parameters: [String: Any] = [
             "first_name": firstName,
             "last_name": lastName,
@@ -22,15 +22,87 @@ class TozaAPI {
             "password": password
         ]
         
-        AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseDecodable(of: User.self) { response in
+        AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
             switch response.result {
-            case .success(let user):
-                completion(.success(user))
+            case .success(let value):
+                if let json = value as? [String: Any], let otp = json["otp"] as? String {
+                    completion(.success(otp))
+                } else {
+                    let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Invalid response format"])
+                    completion(.failure(error))
+                }
             case .failure(let error):
                 completion(.failure(error))
             }
         }
     }
+    
+    func verifyRegister(phone: String, otp: String, completion: @escaping (Result<String, Error>) -> Void) {
+        let url = "https://api.tozauz.uz/api/v1/account/verify-registration-otp/"
+        let parameters: [String: Any] = [
+            "phone_number": phone,
+            "otp": otp
+        ]
+        
+        AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                if let json = value as? [String: Any], let message = json["message"] as? String {
+                    completion(.success(message))
+                } else {
+                    let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Invalid response format"])
+                    completion(.failure(error))
+                }
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+
+    func forgotPassword(phone: String, completion: @escaping (Result<String, Error>) -> Void) {
+        let url = "https://api.tozauz.uz/api/v1/account/forgot-password/"
+        let parameters: [String: Any] = [
+            "phone_number": phone
+        ]
+        
+        AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                if let json = value as? [String: Any], let otp = json["otp"] as? String {
+                    completion(.success(otp))
+                } else {
+                    let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Invalid response format"])
+                    completion(.failure(error))
+                }
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+
+    func verifyForgotPassword(phone: String, otp: String, newPassword: String, completion: @escaping (Result<String, Error>) -> Void) {
+        let url = "https://api.tozauz.uz/api/v1/account/verify-forgot-password-otp/"
+        let parameters: [String: Any] = [
+            "phone_number": phone,
+            "otp": otp,
+            "new_password": newPassword
+        ]
+        
+        AF.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
+            switch response.result {
+            case .success(let value):
+                if let json = value as? [String: Any], let message = json["message"] as? String {
+                    completion(.success(message))
+                } else {
+                    let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Invalid response format"])
+                    completion(.failure(error))
+                }
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+
     
     func authenticateUser(phoneNumber: String, password: String, completion: @escaping (Result<AuthResponse, Error>) -> Void) {
         let url = "https://api.tozauz.uz/api/v1/account/api-token-auth/"
@@ -173,6 +245,32 @@ class TozaAPI {
             }
         }
     }
+    
+    func updateProfile(firstName: String, lastName: String, completion: @escaping (Result<Void, Error>) -> Void) {
+        let url = "https://api.tozauz.uz/api/v1/account/profile/update/"
+        let parameters: [String: Any] = [
+            "first_name": firstName,
+            "last_name": lastName
+        ]
+        
+        let headers: HTTPHeaders = [
+            "Authorization": "Token \(UD.token ?? "")"
+        ]
+        
+        AF.request(url, method: .put, parameters: parameters, encoding: JSONEncoding.default, headers: headers).response { response in
+            switch response.result {
+            case .success:
+                if response.error == nil {
+                    completion(.success(()))
+                } else {
+                    completion(.failure(response.error!))
+                }
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+
     
     func createPayme(amount: Int64, card: String, cardName: String, completion: @escaping (Result<PaymeCreateResponse, Error>) -> Void) {
         let url = "https://api.tozauz.uz/api/v1/bank/payme-create/"

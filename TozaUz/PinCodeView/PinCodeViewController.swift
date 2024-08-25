@@ -128,7 +128,7 @@ class PasswordViewController: UIViewController {
                 
         // Set up the version label
         let versionLabel = UILabel()
-        versionLabel.text = "version".translate() + " 1.0"
+        versionLabel.text = "version".translate() + " 1.1"
         versionLabel.font = UIFont.systemFont(ofSize: 14)
         versionLabel.textColor = .lightGray
         versionLabel.translatesAutoresizingMaskIntoConstraints = false

@@ -7,7 +7,15 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, ChangeProfileViewControllerDelegate {
+    func profileViewDataChanged() {
+        DispatchQueue.main.async {
+            if let cell = self.mainTableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? ProfileTableViewCell {
+                cell.nameLabel.text =  "\(UD.firstName ?? "") \(UD.lastName ?? "")"
+            }
+        }
+    }
+    
     
     lazy var subView: UIView = {
         let view = UIView()
@@ -65,17 +73,34 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension ProfileViewController: ProfileTableViewCellDelegate {
+    func gotoJarima() {
+        let vc = JarimaViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func changeProfile() {
+        let vc = ChangeProfileViewController()
+        vc.delegate = self
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func logout() {
         
-        let alertController = UIAlertController(title: "attention".translate(), message: "are_you_sure_log_out".translate(), preferredStyle: .alert)
-        let logoutAction = UIAlertAction(title: "go_out_guck".translate(), style: .destructive) { (action) in
+        if UD.isLoginMode == "y" {
             self.goLoginPage()
             UD.token = ""
+        } else {
+            let alertController = UIAlertController(title: "attention".translate(), message: "are_you_sure_log_out".translate(), preferredStyle: .alert)
+            let logoutAction = UIAlertAction(title: "go_out_guck".translate(), style: .destructive) { (action) in
+                self.goLoginPage()
+                UD.token = ""
+            }
+            let cancelAction = UIAlertAction(title: "cancel".translate(), style: .cancel, handler: nil)
+            alertController.addAction(logoutAction)
+            alertController.addAction(cancelAction)
+            present(alertController, animated: true)
         }
-        let cancelAction = UIAlertAction(title: "cancel".translate(), style: .cancel, handler: nil)
-        alertController.addAction(logoutAction)
-        alertController.addAction(cancelAction)
-        present(alertController, animated: true)
         
     }
     
@@ -140,5 +165,34 @@ extension ProfileViewController: ProfileTableViewCellDelegate {
         } else {
             UIApplication.shared.openURL(url)
         }
+    }
+}
+
+
+class JarimaViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .systemBackground
+        
+        title = "Penalties".translate()
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        label.text = "nopenalties".translate()
+        label.textColor = .label
+        
+        view.addSubview(label)
+        label.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+        }
+        
+        showLoadingView()
+        label.isHidden = true
+        let seconds = 1.0
+        DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+            self.dissmissLoadingView()
+            label.isHidden = false
+        }
+        
+      
     }
 }

@@ -45,18 +45,24 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate, UINa
         nc4.tabBarItem.image = UIImage(systemName: "person.fill")
         tabBar.tintColor = AppColors.mainColor
         self.delegate = self
-        setViewControllers([nc1, nc2, nc3, nc4], animated: true)
+        
+        print("xxx", UD.isLoginMode)
+        if UD.isLoginMode == "y" {
+            setViewControllers([nc3, nc4], animated: true)
+        } else {
+            setViewControllers([nc1, nc2, nc3, nc4], animated: true)
+        }
         
         getLocations()
         
-        let deviceMode = Functions.getDeviceMode()
-        if deviceMode == .light {
-            UIApplication.shared.windows.first?.overrideUserInterfaceStyle = .light
-        } else if deviceMode == .dark {
-            UIApplication.shared.windows.first?.overrideUserInterfaceStyle = .dark
-        } else {
-            UIApplication.shared.windows.first?.overrideUserInterfaceStyle = .light
-        }
+//        let deviceMode = Functions.getDeviceMode()
+//        if deviceMode == .light {
+//            UIApplication.shared.windows.first?.overrideUserInterfaceStyle = .light
+//        } else if deviceMode == .dark {
+//            UIApplication.shared.windows.first?.overrideUserInterfaceStyle = .dark
+//        } else {
+//            UIApplication.shared.windows.first?.overrideUserInterfaceStyle = .light
+//        }
     }
         
     override func viewDidLayoutSubviews() {

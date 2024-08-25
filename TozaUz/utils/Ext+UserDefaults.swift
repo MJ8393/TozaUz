@@ -11,6 +11,12 @@ import Foundation
 let UD = UserDefaults(suiteName: "uz.ertakchi.www")!
 
 extension UserDefaults {
+    
+    var isLoginMode: String? {
+        get { return self.string(forKey: "isLoginMode") }
+        set { self.set(newValue, forKey: "isLoginMode") }
+    }
+    
     var token: String? {
         get { return self.string(forKey: "token") }
         set { self.set(newValue, forKey: "token") }

@@ -74,3 +74,18 @@
 "cancel" = "Bekor qilish";
 "are_you_sure_delete" = "Haqiqatan ham hisobingizni o'chirmoqchimisiz?";
 "delete" = "O'chirish";
+
+"error_alert_action_v2" = "SMS kod noto'g'ri kiritilgan.";
+"error_alert_action_v3" = "Siz oldin ro'yxatdan o'tmagansiz!";
+"register_action_srfdf" = "Parol qayta tiklandi!";
+"forgot_pass" = "Parolni unutdingizmi?";
+"Recover_Password_title" = "Parolni qayta tiklash";
+"tashdiqlash_zd" = "Tasdiqlash";
+"sms_code" = "SMS kod";
+"sms_text_er" = "SMS kodni tasqidlang";
+"profile_change_info" = "Profil ma'lumotlarini o'zgartirish";
+"save" = "Saqlash";
+"changel_profile_data" = "Profil ma'lumotlari muvaffaqiyatli o'zgartirildi.";
+"login_later" = "Keyinroq kirish";
+"Penalties" = "Jarimalar";
+"nopenalties" = "Hozircha sizda jarimalar yoq.";

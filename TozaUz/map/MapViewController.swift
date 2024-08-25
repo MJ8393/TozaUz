@@ -8,6 +8,7 @@
 import UIKit
 import MapboxMaps
 import CoreLocation
+import Alamofire
 
 class MapViewController: UIViewController, CLLocationManagerDelegate {
     
@@ -15,23 +16,36 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     var locationManager: CLLocationManager!
     var userLocation: CLLocationCoordinate2D?
 
+    @objc func handleNotification(_ notification: Notification) {
+        addMarkers()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(handleNotification(_:)), name: .myNotification, object: nil)
+
 
         // Set up the map view
         mapView = MapView(frame: view.bounds)
         
         mapView.backgroundColor = .systemBackground
         title = "map".translate()
-        
-        let deviceMode = Functions.getDeviceMode()
-        if deviceMode == .light {
+        print("xxxx", UD.mode ?? "")
+        let viewMode = UD.mode ?? ""
+        if viewMode == "light" {
             mapView.mapboxMap.styleURI = .standard
-
-        }else {
+        } else if viewMode == "dark" {
             mapView.mapboxMap.styleURI = .dark
+        } else if viewMode == "system" {
+            let mode = Functions.getDeviceMode()
+            if mode == .light {
+                mapView.mapboxMap.styleURI = .standard
+            } else if mode == .dark {
+                mapView.mapboxMap.styleURI = .dark
+            } else {
+                mapView.mapboxMap.styleURI = .standard
+            }
         }
         
         let cameraOptions = CameraOptions(center: CLLocationCoordinate2D(latitude: 41.2995, longitude: 69.2401), zoom: 6, bearing: 0, pitch: 0)
@@ -75,6 +89,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
       
         // Add markers
         addMarkers()
+    
     }
     
     // Location manager delegate method
@@ -97,10 +112,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     // Add markers to the map
     func addMarkers() {
-        let coordinates = [
-            CLLocationCoordinate2D(latitude: 41.48719788, longitude: 69.58899689),
-            CLLocationCoordinate2D(latitude: 41.00427628, longitude: 70.07332611)
-        ]
+        print("xxxx", mapLocations)
+        var coordinates = [CLLocationCoordinate2D]()
+
+        for location in mapLocations {
+            coordinates.append(CLLocationCoordinate2DMake(location.longitude, location.latitude))
+        }
         
         var pointAnnotations = [PointAnnotation]()
         
@@ -124,14 +141,22 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
 
 extension MapViewController {
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-            super.traitCollectionDidChange(previousTraitCollection)
-        let deviceMode = Functions.getDeviceMode()
-        if deviceMode == .light {
+        super.traitCollectionDidChange(previousTraitCollection)
+        
+        let viewMode = UD.mode ?? ""
+        if viewMode == "light" {
             mapView.mapboxMap.styleURI = .standard
-
-        }else {
+        } else if viewMode == "dark" {
             mapView.mapboxMap.styleURI = .dark
-        }
-        }
+        } else if viewMode == "system" {
+            let mode = Functions.getDeviceMode()
+            if mode == .light {
+                mapView.mapboxMap.styleURI = .standard
+            } else if mode == .dark {
+                mapView.mapboxMap.styleURI = .dark
+            } else {
+                mapView.mapboxMap.styleURI = .standard
+            }
+        }}
 
 }

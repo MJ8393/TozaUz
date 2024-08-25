@@ -72,6 +72,7 @@ class LoginViewController: UIViewController {
                         UD.token = authResponse.token
                         UD.password = password
                         self.setPasswordScreen()
+                        UD.isLoginMode = "n"
                     case .failure(let error):
                         self.showAlert(message: "no_such_user".translate())
                         print("Failed to authenticate user: \(error.localizedDescription)")
@@ -86,7 +87,28 @@ class LoginViewController: UIViewController {
         view.endEditing(true)
     }
     
+    @objc func loginLaterTapped() {
+         print("Login later button tapped")
+        UD.isLoginMode = "y"
+        let newRootViewController = MainTabBarController()
+        if let sceneDelegate = SceneDelegate.shared {
+            sceneDelegate.window?.rootViewController = newRootViewController
+        }
+     }
+    
     private func initViews() {
+        
+        let loginLaterButton = UIButton(type: .system)
+        loginLaterButton.setTitle("login_later".translate(), for: .normal)
+        loginLaterButton.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .medium) // Set the text to bold
+               loginLaterButton.addTarget(self, action: #selector(loginLaterTapped), for: .touchUpInside)
+               
+               // Create a UIBarButtonItem with the custom UIButton
+               let barButtonItem = UIBarButtonItem(customView: loginLaterButton)
+               
+               // Set the button to the right side of the navigation bar
+               navigationItem.rightBarButtonItem = barButtonItem
+        
         view.backgroundColor = .systemBackground
         view.addSubview(subView)
         subView.snp.makeConstraints { make in
@@ -161,6 +183,12 @@ extension LoginViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension LoginViewController: LoginTableViewCellDelegate {
+    func forgotPassTapped() {
+        view.endEditing(true)
+        let vc = ForgotPassViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func registerButtonTapped() {
         view.endEditing(true)
         let vc = RegisterViewController()
