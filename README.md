@@ -57,6 +57,6 @@ open TozaUz.xcworkspace
 ```
 
 🤝 Contributors
-Mehriddin Jumaev — iOS Developer
-Nurmuhammad Yuldoshev - Android Developer
-Boburbek Botirov - Backend Developer
+- Mehriddin Jumaev — iOS Developer
+- Nurmuhammad Yuldoshev - Android Developer
+- Boburbek Botirov - Backend Developer
