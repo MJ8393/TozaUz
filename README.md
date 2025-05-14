@@ -54,6 +54,7 @@ git clone https://github.com/your-org/tozauz.git
 cd tozauz/ios
 pod install
 open TozaUz.xcworkspace
+```
 
 🤝 Contributors
 Mehriddin Jumaev — iOS Developer
